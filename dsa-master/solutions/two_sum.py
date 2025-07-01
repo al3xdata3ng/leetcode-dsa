@@ -1,34 +1,20 @@
 # problem statement url: https://leetcode.com/problems/two-sum/description/?utm_source=instabyte.io&utm_medium=referral&utm_campaign=interview-master-100
 
 """ 
-Steps:
+Brute force solution would be a double for loop, which would lead to O(n^2) time complexity.
 
-1. Sort array with quick sort or merge sort - O(nlogn)
-2. Iterate over the array and calculate the some of two consecutive elements
+Intuition for achieving O(n) time complexity:
+
+Think of each iteration as a an equation with a single unknown:
+current_iteration_value = target - x => x = target - current_iteration_value
+
+So the solution of the problem comes down to detecting the iteration which solves this equation.
+
+Solution inspired from: https://instabyte.io/p/amazon-coding-challenge-netflix-design
 """
 
-def sort_array(array: list) -> list | None:
+from typing import Optional
 
-    array.sort()
+def two_sums(array: list[int], target: int) -> Optional[list]:
 
-    return array
-
-def two_sum(nums: list[int], target:int) -> list[int] | None:
-
-    sorted_array = sort_array(array=nums) # O(nlogn)
-
-    for index in range(len(sorted_array)): # O(n)
-        consecutive_sum = sorted_array[index] + sorted_array[index + 1]
-
-        if consecutive_sum == target:
-            return [index, index + 1]
-            break
-
-if __name__ == "__main__":
-
-    nums = [2,7,11,15]
-    target = 9 
-
-    output = two_sum(nums=nums, target=target)
-
-    print(output)
+    
