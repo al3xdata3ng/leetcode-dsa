@@ -1,5 +1,4 @@
 def valid_parentheses(parentheses_seq: str) -> bool | None:
-
     parentheses_pairs_dict: dict = {")": "(", "}": "{", "]": "["}
 
     stack = []
@@ -11,7 +10,7 @@ def valid_parentheses(parentheses_seq: str) -> bool | None:
 
     return len(stack) == 0
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     string = "(]"
     print(valid_parentheses(parentheses_seq=string))
