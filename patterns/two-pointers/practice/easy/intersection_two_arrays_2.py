@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def intersect(nums1, nums2):
     """
     :type nums1: List[int]
@@ -14,7 +15,7 @@ def intersect(nums1, nums2):
         for j in c2.keys():
             if i == j:
                 intersection.extend([i] * min(c1[i], c2[j]))
-    
+
     return intersection
 
 

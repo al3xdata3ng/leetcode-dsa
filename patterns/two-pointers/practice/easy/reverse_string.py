@@ -4,8 +4,8 @@ def reverseString(s: list) -> None:
     :rtype: None Do not return anything, modify s in-place instead.
     """
 
-    i = 0 
-    j = len(s) - 1 
+    i = 0
+    j = len(s) - 1
 
     while i <= j:
         s[i], s[j] = s[j], s[i]
@@ -13,7 +13,8 @@ def reverseString(s: list) -> None:
         i += 1
         j -= 1
 
+
 if __name__ == "__main__":
-    s = ["h","e","l","l","o"]
+    s = ["h", "e", "l", "l", "o"]
     reverseString(s)
     print(s)  # Output: ["o","l","l","e","h"]

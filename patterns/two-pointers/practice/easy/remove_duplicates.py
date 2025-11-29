@@ -10,8 +10,9 @@ def removeDuplicates(nums: list[int]) -> int:
         if nums[i + 1] != nums[i]:
             nums[k] = nums[i + 1]
             k += 1
-        
+
     return k
+
 
 if __name__ == "__main__":
     nums = [1, 1, 2]
