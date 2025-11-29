@@ -22,3 +22,5 @@ if __name__ == "__main__":
     arr1 = [1, 2, 2, 1]
     arr2 = [2, 2]
     print(intersect(arr1, arr2))  # Output: [2, 2]
+
+# https://leetcode.com/problems/intersection-of-two-arrays-ii/solutions/1468295/python-2-approaches-3-follow-up-question-ka3i/
